@@ -41,7 +41,6 @@ class Calendar {
       elText.appendChild(d.createTextNode(name));
       elDate.appendChild(elText);
       elDate.identifier = id;
-      console.log(elDate.identifier, id)
       months[date.getMonth()].appendChild(elDate);
       date.setDate(date.getDate() + 1);
     }
