@@ -1,5 +1,6 @@
 const d = document;
 
+const MONTH_NAMES = 'Jan,Feb,Mar,Apr,May,Jun,Jul,Aug,Sep,Oct,Nov,Dec'.split(',');
 class Calendar {
   constructor(year) {
     this.year = year;
@@ -20,6 +21,9 @@ class Calendar {
     for (let monthIndex = 0; monthIndex < 12; monthIndex += 1) {
       const elMonth = d.createElement('month');;
       months[monthIndex] = elMonth;
+      const elMonthName = d.createElement('h1');
+      elMonthName.appendChild(d.createTextNode(MONTH_NAMES[monthIndex]))
+      elMonth.appendChild(elMonthName);
       el.appendChild(elMonth);
     }
 

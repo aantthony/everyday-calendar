@@ -21,6 +21,13 @@ month {
   margin: 0 4px;
 }
 
+month h1 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 10px;
+  opacity: 0.75;
+}
+
 .day {
   background: white;
   border: none;
