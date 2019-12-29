@@ -1,5 +1,17 @@
 const d = document;
 
+function handleFirstTab(e) {
+  // the "I am a keyboard user" key
+  if (e.keyCode === 9) {
+    document.body.classList.add('user-is-tabbing');
+    window.removeEventListener('keydown', handleFirstTab);
+  }
+}
+
+if (typeof window !== 'undefined') {
+  window.addEventListener('keydown', handleFirstTab);
+}
+
 const MONTH_NAMES = 'Jan,Feb,Mar,Apr,May,Jun,Jul,Aug,Sep,Oct,Nov,Dec'.split(',');
 class Calendar {
   constructor(year) {

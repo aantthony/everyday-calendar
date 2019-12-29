@@ -6,6 +6,15 @@ html, body {
   background: #eee;
 }
 
+/* https://medium.com/hackernoon/removing-that-ugly-focus-ring-and-keeping-it-too-6c8727fefcd2 */
+body:not(.user-is-tabbing) button:focus,
+body:not(.user-is-tabbing) input:focus,
+body:not(.user-is-tabbing) select:focus,
+body:not(.user-is-tabbing) summary:focus,
+body:not(.user-is-tabbing) textarea:focus {
+  outline: none;
+}
+
 #calendar {
   padding: 12px;
   margin: auto;
